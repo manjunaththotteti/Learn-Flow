@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LearnFlow - Topics</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Recommended Topics</h1>
+  </header>
+
+  <main class="container">
+    <section id="topics-list"></section>
+  </main>
+
+  <script>
+    const topics = [
+      { title: "React Basics", level: "Intermediate", duration: "2h" },
+      { title: "Python for Data Science", level: "Beginner", duration: "3h" },
+      { title: "Machine Learning Intro", level: "Advanced", duration: "4h" }
+    ];
+
+    const container = document.getElementById("topics-list");
+    topics.forEach(t => {
+      container.innerHTML += `
+        <div class="card">
+          <h3>${t.title}</h3>
+          <p>${t.level} • ${t.duration}</p>
+          <button class="start-learning-btn">Start Learning</button>
+        </div>`;
+    });
+  </script>
+</body>
+</html>
